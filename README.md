@@ -1,6 +1,12 @@
-# RubyLdap
+# ldap2ssm
 
-TODO: Write a gem description
+Retrieves storage metrics in the grid BDII and uses them to produce StAR-SSM compliant records.
+
+## Build
+
+To buil the gem simply issue the command:
+
+    gem build gem build ldap2ssm.gemspec
 
 ## Installation
 
