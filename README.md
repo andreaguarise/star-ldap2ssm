@@ -21,6 +21,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ldap2ssm
+    
+## Dependencies
+
+This gem depends on the 'faustcommon' gem that you can find at:
+
+    https://github.com/andreaguarise/sendToFaust-common
 
 ## Usage
 
