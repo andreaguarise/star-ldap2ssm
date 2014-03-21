@@ -3,9 +3,14 @@ require 'fileutils'
 require 'logger'
 require 'utils/general'
 
-currentDir =File.dirname(__FILE__).to_s + "/../../"
+def setVariables(options)
 
-$CONF_DIR = currentDir + "conf"
+currentDir =File.dirname(__FILE__).to_s + "/../../"
+if options[:conf] 
+  $CONF_DIR = options[:conf]
+else
+  $CONF_DIR = currentDir + "conf"
+end
 
 conf_file = $CONF_DIR + File::SEPARATOR + "ldap2ssm.properties"
 properties = GeneralUtils.LoadProperties(conf_file)
@@ -28,11 +33,7 @@ $LOG =  Logger.new(STDOUT)
 if logfilename.nil?
   $LOG =  Logger.new(STDOUT)
 else
-  
-
-
-  
-  
+    
   if !File.exist?(logfilename)
     GeneralUtils.CheckDir(File.dirname(logfilename))
     FileUtils.touch(logfilename)
@@ -54,3 +55,9 @@ if $MAX_DIRFILES.nil?
   $MAX_DIRFILES = 100
 end
 $EXIT_FATAL= 111
+
+end
+
+setVariables(Hash.new)
+
+

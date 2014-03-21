@@ -8,9 +8,9 @@ require 'ldap2ssm/version'
 Gem::Specification.new do |mygem|
   mygem.name          = "ldap2ssm"
   mygem.version       = Ldap2ssm::VERSION
-  mygem.authors       = ["Laura Iannotti"]
-  mygem.email         = ["laura.iannotti@to.infn.it"]
-  mygem.description   = %q{Performs some ldap commands}
+  mygem.authors       = ["Laura Iannotti","Andrea Guarise"]
+  mygem.email         = ["laura.iannotti@to.infn.it","andrea.guarise@to.infn.it"]
+  mygem.description   = %q{Queries a BDII and outputs storage records}
   mygem.summary       = %q{summary}
   mygem.homepage      = ""
 
