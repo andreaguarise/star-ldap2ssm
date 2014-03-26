@@ -30,8 +30,25 @@ This gem depends on the 'faustcommon' gem that you can find at:
 
 ## Usage
 
-TODO: Write usage instructions here
+	The command can be run with
+	
+	$ldapssm_run -C $confpath
+	
+	Usage: ldap2ssm_run [OPTIONS]
+   
+    -C, --Conf conf                  Path to configuration file dir
+    -h, --help                       Print this screen
 
+	The option -C allows to specify the directory containing the configuration files. 
+	
+## Config Files
+
+	Two configuration files are needed. They must be in the same directory, which in turn can be specified with the -C option 
+	on the command line.
+	
+	The file ldap2ssm.properties contains the config parameters of the script. 
+	Another file usually sitelist.conf contains, one per line, the list of GOCDB name of sites for wich usage records will be produced.
+	
 ## Contributing
 
 1. Fork it
